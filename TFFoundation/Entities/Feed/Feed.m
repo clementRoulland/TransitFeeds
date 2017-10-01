@@ -10,4 +10,20 @@
 
 @implementation Feed
 
+///--------------------------------------
+#pragma mark - Init
+///--------------------------------------
+
+- (instancetype)initWithName:(NSString *)name
+                        city:(NSString *)city
+                 countryCode:(NSString *)countryCode
+{
+    self = [super init];
+    if (self) {
+        _name       = name;
+        _city           = city;
+        _countryCode    = countryCode;
+    }
+    return self;
+}
 @end

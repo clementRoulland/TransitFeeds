@@ -11,8 +11,6 @@
 
 @interface ViewController ()
 
-@property FeedAPIClient *feedApiClient;
-
 @end
 
 @implementation ViewController
@@ -21,10 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.feedApiClient = [FeedAPIClient sharedInstance];
-    
-    [self.feedApiClient getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
-        
+    [[FeedAPIClient sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
+        for (Feed *feed in feeds) {
+            NSLog(@"%@", feed.name);
+        }
     }];
 }
 

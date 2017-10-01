@@ -9,6 +9,7 @@
 #import "FeedAPIClient.h"
 #import "Constants.h"
 #import "Feed.h"
+#import "FeedMapper.h"
 
 @implementation FeedAPIClient
 
@@ -32,11 +33,11 @@
 
 - (void)getFeedsWithCompletion:(void (^)(NSArray *feeds, NSError *error))completion
 {
-    NSString *feedsUrl = [NSString stringWithFormat:@"%@/feeds", kBaseStringUrl];
+    NSString *feedsUrl      = [NSString stringWithFormat:@"%@/feeds", kBaseStringUrl];
+    NSDictionary *params    = @{
+                                @"detailed" :@1,
+                                };
     
-    NSDictionary *params = @{
-                             @"detailed" :@1,
-                             };
     [self doGetWithUrl:feedsUrl
             parameters:params
             completion:^(NSDictionary *response, NSError *error) {
@@ -52,9 +53,11 @@
                 NSMutableArray *resultFeeds = [@[] mutableCopy];
                 for (NSDictionary *feedFromServer in feedsFromServer) {
                     
-//                    Feed *newFeed = [self messageFromDictionary:messageFromServer];
-//                    [resultMessages addObject:newMessage];
-                    [resultFeeds addObject:feedFromServer];
+                    Feed *feed = [FeedMapper mapApiToObject:feedFromServer];
+                    if (!feed) {
+                        continue;
+                    }
+                    [resultFeeds addObject:feed];
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), ^{

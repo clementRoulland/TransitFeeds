@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "FeedAPIClient.h"
+#import "Feed.h"
 // Logger
 #import "TFLogger.h"
 
