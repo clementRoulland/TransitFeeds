@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EB09C2431F80A09C008F04FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2421F80A09C008F04FD /* AppDelegate.m */; };
-		EB09C2461F80A09C008F04FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2451F80A09C008F04FD /* ViewController.m */; };
-		EB09C2491F80A09C008F04FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB09C2471F80A09C008F04FD /* Main.storyboard */; };
 		EB09C24B1F80A09C008F04FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB09C24A1F80A09C008F04FD /* Assets.xcassets */; };
 		EB09C24E1F80A09C008F04FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB09C24C1F80A09C008F04FD /* LaunchScreen.storyboard */; };
 		EB09C2511F80A09C008F04FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2501F80A09C008F04FD /* main.m */; };
@@ -33,6 +31,8 @@
 		EBC8AE4D1F8165D30056B59D /* FeedMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE4B1F8165D30056B59D /* FeedMapper.m */; };
 		EBC8AE501F816C0B0056B59D /* FeedStore.h in Headers */ = {isa = PBXBuildFile; fileRef = EBC8AE4E1F816C0B0056B59D /* FeedStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBC8AE511F816C0B0056B59D /* FeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE4F1F816C0B0056B59D /* FeedStore.m */; };
+		EBC8AE561F81B2560056B59D /* ShowFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE551F81B2560056B59D /* ShowFeedsViewController.m */; };
+		EBC8AE581F81B2680056B59D /* ShowFeedsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +69,6 @@
 		EB09C23E1F80A09C008F04FD /* TransitFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB09C2411F80A09C008F04FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB09C2421F80A09C008F04FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EB09C2441F80A09C008F04FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EB09C2451F80A09C008F04FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EB09C2481F80A09C008F04FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB09C24A1F80A09C008F04FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB09C24D1F80A09C008F04FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB09C24F1F80A09C008F04FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +97,9 @@
 		EBC8AE4B1F8165D30056B59D /* FeedMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedMapper.m; sourceTree = "<group>"; };
 		EBC8AE4E1F816C0B0056B59D /* FeedStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedStore.h; sourceTree = "<group>"; };
 		EBC8AE4F1F816C0B0056B59D /* FeedStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedStore.m; sourceTree = "<group>"; };
+		EBC8AE541F81B2560056B59D /* ShowFeedsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowFeedsViewController.h; sourceTree = "<group>"; };
+		EBC8AE551F81B2560056B59D /* ShowFeedsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFeedsViewController.m; sourceTree = "<group>"; };
+		EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowFeedsStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,15 +162,9 @@
 		EB09C2401F80A09C008F04FD /* TransitFeeds */ = {
 			isa = PBXGroup;
 			children = (
-				EB09C2411F80A09C008F04FD /* AppDelegate.h */,
-				EB09C2421F80A09C008F04FD /* AppDelegate.m */,
-				EB09C2441F80A09C008F04FD /* ViewController.h */,
-				EB09C2451F80A09C008F04FD /* ViewController.m */,
-				EB09C2471F80A09C008F04FD /* Main.storyboard */,
-				EB09C24A1F80A09C008F04FD /* Assets.xcassets */,
-				EB09C24C1F80A09C008F04FD /* LaunchScreen.storyboard */,
-				EB09C24F1F80A09C008F04FD /* Info.plist */,
-				EB09C2501F80A09C008F04FD /* main.m */,
+				EBC8AE591F81B7B60056B59D /* Classes */,
+				EBC8AE5A1F81B7C40056B59D /* Resources */,
+				EBC8AE5B1F81B7D80056B59D /* Supporting Files */,
 			);
 			path = TransitFeeds;
 			sourceTree = "<group>";
@@ -187,12 +181,8 @@
 		EB09C2771F80A0FE008F04FD /* TFFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				EB09C2781F80A0FE008F04FD /* TFFoundation.h */,
-				EB09C2791F80A0FE008F04FD /* TFFoundation.m */,
-				EB09C29A1F814325008F04FD /* Constants.h */,
-				EB09C2911F80AC02008F04FD /* Common */,
-				EB09C2921F813949008F04FD /* Entities */,
-				EB09C2A91F814FFF008F04FD /* TFFoundation-Prefix.pch */,
+				EBC8AE5C1F81B7FB0056B59D /* Classes */,
+				EBC8AE5D1F81B8050056B59D /* Supporting Files */,
 			);
 			path = TFFoundation;
 			sourceTree = "<group>";
@@ -262,6 +252,72 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBC8AE521F81B2130056B59D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EBC8AE531F81B21E0056B59D /* ShowFeeds */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EBC8AE531F81B21E0056B59D /* ShowFeeds */ = {
+			isa = PBXGroup;
+			children = (
+				EBC8AE541F81B2560056B59D /* ShowFeedsViewController.h */,
+				EBC8AE551F81B2560056B59D /* ShowFeedsViewController.m */,
+				EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */,
+			);
+			path = ShowFeeds;
+			sourceTree = "<group>";
+		};
+		EBC8AE591F81B7B60056B59D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C2411F80A09C008F04FD /* AppDelegate.h */,
+				EB09C2421F80A09C008F04FD /* AppDelegate.m */,
+				EBC8AE521F81B2130056B59D /* Scenes */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EBC8AE5A1F81B7C40056B59D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C24A1F80A09C008F04FD /* Assets.xcassets */,
+				EB09C24C1F80A09C008F04FD /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBC8AE5B1F81B7D80056B59D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C24F1F80A09C008F04FD /* Info.plist */,
+				EB09C2501F80A09C008F04FD /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBC8AE5C1F81B7FB0056B59D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C2781F80A0FE008F04FD /* TFFoundation.h */,
+				EB09C2791F80A0FE008F04FD /* TFFoundation.m */,
+				EB09C29A1F814325008F04FD /* Constants.h */,
+				EB09C2911F80AC02008F04FD /* Common */,
+				EB09C2921F813949008F04FD /* Entities */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EBC8AE5D1F81B8050056B59D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C2A91F814FFF008F04FD /* TFFoundation-Prefix.pch */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +468,7 @@
 			files = (
 				EB09C24E1F80A09C008F04FD /* LaunchScreen.storyboard in Resources */,
 				EB09C24B1F80A09C008F04FD /* Assets.xcassets in Resources */,
-				EB09C2491F80A09C008F04FD /* Main.storyboard in Resources */,
+				EBC8AE581F81B2680056B59D /* ShowFeedsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +493,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB09C2461F80A09C008F04FD /* ViewController.m in Sources */,
 				EB09C2511F80A09C008F04FD /* main.m in Sources */,
 				EB09C2431F80A09C008F04FD /* AppDelegate.m in Sources */,
+				EBC8AE561F81B2560056B59D /* ShowFeedsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,14 +545,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EB09C2471F80A09C008F04FD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB09C2481F80A09C008F04FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EB09C24C1F80A09C008F04FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -619,7 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG46ENA27M;
 				"HEADER_SEARCH_PATHS[arch=*]" = "$SOURCE_ROOT/**";
-				INFOPLIST_FILE = TransitFeeds/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TransitFeeds/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brozh.TransitFeeds;
@@ -635,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG46ENA27M;
 				"HEADER_SEARCH_PATHS[arch=*]" = "$SOURCE_ROOT/**";
-				INFOPLIST_FILE = TransitFeeds/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TransitFeeds/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brozh.TransitFeeds;
@@ -680,7 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG46ENA27M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TFFoundation/TFFoundation-Prefix.pch";
+				GCC_PREFIX_HEADER = "TFFoundation/Supporting Files/TFFoundation-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -694,7 +742,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG46ENA27M;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TFFoundation/TFFoundation-Prefix.pch";
+				GCC_PREFIX_HEADER = "TFFoundation/Supporting Files/TFFoundation-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

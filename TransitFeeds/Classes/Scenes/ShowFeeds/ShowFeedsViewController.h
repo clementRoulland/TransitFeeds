@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ShowFeedsViewController.h
 //  TransitFeeds
 //
 //  Created by Clement Roulland on 17-10-01.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ShowFeedsViewController : UIViewController
 
 @end
-
