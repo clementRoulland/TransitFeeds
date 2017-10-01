@@ -42,9 +42,7 @@
             parameters:params
             completion:^(NSDictionary *response, NSError *error) {
                 if(error){
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        completion(nil, error);
-                    });
+                    completion(nil, error);
                     return;
                 }
                 
@@ -59,10 +57,7 @@
                     }
                     [resultFeeds addObject:feed];
                 }
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    completion(resultFeeds, error);
-                });
+                completion(resultFeeds, error);
             }];
 }
 

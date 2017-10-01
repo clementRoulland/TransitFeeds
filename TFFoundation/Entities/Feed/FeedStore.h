@@ -20,6 +20,7 @@
 
 /**
  Get feeds by country
+ Example: { "FR": [feed1, feed2], "EN": [feed3, feed4, feed5], ... }
 
  @param completion Block with feeds by country and error
  */

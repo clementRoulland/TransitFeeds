@@ -20,12 +20,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [[FeedStore sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
-        for (Feed *feed in feeds) {
-            NSLog(@"%@", feed.name);
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            for (Feed *feed in feeds) {
+                NSLog(@"%@", feed.name);
+            }
+        });
     }];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

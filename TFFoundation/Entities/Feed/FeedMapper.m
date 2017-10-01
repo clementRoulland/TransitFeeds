@@ -20,7 +20,7 @@
     NSString *city          = apiFeed[@"location"];
     NSString *countryCode   = apiFeed[@"country_code"];
     
-    if (!name || !city || !countryCode) {
+    if (!(name && city && countryCode)) {
         return nil;
     }
     
