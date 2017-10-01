@@ -1,0 +1,16 @@
+//
+//  TFFoundation-Prefix.pch
+//  TransitFeeds
+//
+//  Created by Clement Roulland on 17-10-01.
+//  Copyright © 2017 Brozh. All rights reserved.
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import "TFLog.h"
+#endif

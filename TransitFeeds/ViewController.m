@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <TFFoundation/TFFoundation.h>
 
 @interface ViewController ()
+
+@property FeedAPIClient *feedApiClient;
 
 @end
 
@@ -17,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.feedApiClient = [FeedAPIClient sharedInstance];
+    
+    [self.feedApiClient getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
+        
+    }];
 }
 
 

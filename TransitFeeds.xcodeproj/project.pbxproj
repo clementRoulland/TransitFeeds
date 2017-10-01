@@ -14,6 +14,21 @@
 		EB09C24E1F80A09C008F04FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB09C24C1F80A09C008F04FD /* LaunchScreen.storyboard */; };
 		EB09C2511F80A09C008F04FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2501F80A09C008F04FD /* main.m */; };
 		EB09C25B1F80A09C008F04FD /* TransitFeedsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C25A1F80A09C008F04FD /* TransitFeedsTests.m */; };
+		EB09C27A1F80A0FE008F04FD /* TFFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2791F80A0FE008F04FD /* TFFoundation.m */; };
+		EB09C27B1F80A0FE008F04FD /* TFFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB09C2781F80A0FE008F04FD /* TFFoundation.h */; };
+		EB09C2861F80A132008F04FD /* TFFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2851F80A132008F04FD /* TFFoundationTests.m */; };
+		EB09C2881F80A132008F04FD /* libTFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB09C2761F80A0FE008F04FD /* libTFFoundation.a */; };
+		EB09C2901F80AA07008F04FD /* TFAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C28F1F80AA07008F04FD /* TFAPIClient.m */; };
+		EB09C2961F813990008F04FD /* FeedAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2951F813990008F04FD /* FeedAPIClient.m */; };
+		EB09C2991F813DDF008F04FD /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C2981F813DDF008F04FD /* Feed.m */; };
+		EB09C29F1F81444B008F04FD /* TFLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EB09C29E1F81444B008F04FD /* TFLogger.m */; };
+		EB09C2A31F814C89008F04FD /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C29A1F814325008F04FD /* Constants.h */; };
+		EB09C2A41F814C89008F04FD /* TFLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C29D1F81444B008F04FD /* TFLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB09C2A51F814C89008F04FD /* TFLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2A01F81450F008F04FD /* TFLog.h */; };
+		EB09C2A61F814C89008F04FD /* TFAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C28E1F80AA07008F04FD /* TFAPIClient.h */; };
+		EB09C2A71F814C89008F04FD /* FeedAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2941F813990008F04FD /* FeedAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB09C2A81F814C89008F04FD /* Feed.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2971F813DDF008F04FD /* Feed.h */; };
+		EB09C2AC1F81533C008F04FD /* libTFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB09C2761F80A0FE008F04FD /* libTFFoundation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +39,27 @@
 			remoteGlobalIDString = EB09C23D1F80A09C008F04FD;
 			remoteInfo = TransitFeeds;
 		};
+		EB09C2891F80A132008F04FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB09C2361F80A09C008F04FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB09C2751F80A0FE008F04FD;
+			remoteInfo = TFFoundation;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EB09C2741F80A0FE008F04FD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EB09C27B1F80A0FE008F04FD /* TFFoundation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EB09C23E1F80A09C008F04FD /* TransitFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +75,23 @@
 		EB09C2561F80A09C008F04FD /* TransitFeedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitFeedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB09C25A1F80A09C008F04FD /* TransitFeedsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitFeedsTests.m; sourceTree = "<group>"; };
 		EB09C25C1F80A09C008F04FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB09C2761F80A0FE008F04FD /* libTFFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTFFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB09C2781F80A0FE008F04FD /* TFFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFFoundation.h; sourceTree = "<group>"; };
+		EB09C2791F80A0FE008F04FD /* TFFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFFoundation.m; sourceTree = "<group>"; };
+		EB09C2831F80A132008F04FD /* TFFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB09C2851F80A132008F04FD /* TFFoundationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFFoundationTests.m; sourceTree = "<group>"; };
+		EB09C2871F80A132008F04FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB09C28E1F80AA07008F04FD /* TFAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFAPIClient.h; sourceTree = "<group>"; };
+		EB09C28F1F80AA07008F04FD /* TFAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFAPIClient.m; sourceTree = "<group>"; };
+		EB09C2941F813990008F04FD /* FeedAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedAPIClient.h; sourceTree = "<group>"; };
+		EB09C2951F813990008F04FD /* FeedAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedAPIClient.m; sourceTree = "<group>"; };
+		EB09C2971F813DDF008F04FD /* Feed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		EB09C2981F813DDF008F04FD /* Feed.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		EB09C29A1F814325008F04FD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		EB09C29D1F81444B008F04FD /* TFLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFLogger.h; sourceTree = "<group>"; };
+		EB09C29E1F81444B008F04FD /* TFLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFLogger.m; sourceTree = "<group>"; };
+		EB09C2A01F81450F008F04FD /* TFLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFLog.h; sourceTree = "<group>"; };
+		EB09C2A91F814FFF008F04FD /* TFFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFFoundation-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB09C2AC1F81533C008F04FD /* libTFFoundation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +107,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB09C2731F80A0FE008F04FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB09C2801F80A132008F04FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB09C2881F80A132008F04FD /* libTFFoundation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +133,10 @@
 			children = (
 				EB09C2401F80A09C008F04FD /* TransitFeeds */,
 				EB09C2591F80A09C008F04FD /* TransitFeedsTests */,
+				EB09C2771F80A0FE008F04FD /* TFFoundation */,
+				EB09C2841F80A132008F04FD /* TFFoundationTests */,
 				EB09C23F1F80A09C008F04FD /* Products */,
+				EB09C2AB1F81533C008F04FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +145,8 @@
 			children = (
 				EB09C23E1F80A09C008F04FD /* TransitFeeds.app */,
 				EB09C2561F80A09C008F04FD /* TransitFeedsTests.xctest */,
+				EB09C2761F80A0FE008F04FD /* libTFFoundation.a */,
+				EB09C2831F80A132008F04FD /* TFFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,7 +176,99 @@
 			path = TransitFeedsTests;
 			sourceTree = "<group>";
 		};
+		EB09C2771F80A0FE008F04FD /* TFFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C2781F80A0FE008F04FD /* TFFoundation.h */,
+				EB09C2791F80A0FE008F04FD /* TFFoundation.m */,
+				EB09C29A1F814325008F04FD /* Constants.h */,
+				EB09C2911F80AC02008F04FD /* Common */,
+				EB09C2921F813949008F04FD /* Entities */,
+				EB09C2A91F814FFF008F04FD /* TFFoundation-Prefix.pch */,
+			);
+			path = TFFoundation;
+			sourceTree = "<group>";
+		};
+		EB09C2841F80A132008F04FD /* TFFoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C2851F80A132008F04FD /* TFFoundationTests.m */,
+				EB09C2871F80A132008F04FD /* Info.plist */,
+			);
+			path = TFFoundationTests;
+			sourceTree = "<group>";
+		};
+		EB09C2911F80AC02008F04FD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C29C1F814434008F04FD /* Logger */,
+				EB09C29B1F81442A008F04FD /* Network */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EB09C2921F813949008F04FD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C2931F813969008F04FD /* Feed */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EB09C2931F813969008F04FD /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C2941F813990008F04FD /* FeedAPIClient.h */,
+				EB09C2951F813990008F04FD /* FeedAPIClient.m */,
+				EB09C2971F813DDF008F04FD /* Feed.h */,
+				EB09C2981F813DDF008F04FD /* Feed.m */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		EB09C29B1F81442A008F04FD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C28E1F80AA07008F04FD /* TFAPIClient.h */,
+				EB09C28F1F80AA07008F04FD /* TFAPIClient.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EB09C29C1F814434008F04FD /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				EB09C29D1F81444B008F04FD /* TFLogger.h */,
+				EB09C29E1F81444B008F04FD /* TFLogger.m */,
+				EB09C2A01F81450F008F04FD /* TFLog.h */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		EB09C2AB1F81533C008F04FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EB09C2A21F814C68008F04FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB09C2A41F814C89008F04FD /* TFLogger.h in Headers */,
+				EB09C2A71F814C89008F04FD /* FeedAPIClient.h in Headers */,
+				EB09C2A31F814C89008F04FD /* Constants.h in Headers */,
+				EB09C2A51F814C89008F04FD /* TFLog.h in Headers */,
+				EB09C2A61F814C89008F04FD /* TFAPIClient.h in Headers */,
+				EB09C2A81F814C89008F04FD /* Feed.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		EB09C23D1F80A09C008F04FD /* TransitFeeds */ = {
@@ -141,6 +306,42 @@
 			productReference = EB09C2561F80A09C008F04FD /* TransitFeedsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EB09C2751F80A0FE008F04FD /* TFFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB09C27C1F80A0FE008F04FD /* Build configuration list for PBXNativeTarget "TFFoundation" */;
+			buildPhases = (
+				EB09C2721F80A0FE008F04FD /* Sources */,
+				EB09C2731F80A0FE008F04FD /* Frameworks */,
+				EB09C2741F80A0FE008F04FD /* CopyFiles */,
+				EB09C2A21F814C68008F04FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TFFoundation;
+			productName = TFFoundation;
+			productReference = EB09C2761F80A0FE008F04FD /* libTFFoundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB09C2821F80A132008F04FD /* TFFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB09C28B1F80A132008F04FD /* Build configuration list for PBXNativeTarget "TFFoundationTests" */;
+			buildPhases = (
+				EB09C27F1F80A132008F04FD /* Sources */,
+				EB09C2801F80A132008F04FD /* Frameworks */,
+				EB09C2811F80A132008F04FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB09C28A1F80A132008F04FD /* PBXTargetDependency */,
+			);
+			name = TFFoundationTests;
+			productName = TFFoundationTests;
+			productReference = EB09C2831F80A132008F04FD /* TFFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -159,6 +360,14 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = EB09C23D1F80A09C008F04FD;
 					};
+					EB09C2751F80A0FE008F04FD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					EB09C2821F80A132008F04FD = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = EB09C2391F80A09C008F04FD /* Build configuration list for PBXProject "TransitFeeds" */;
@@ -176,6 +385,8 @@
 			targets = (
 				EB09C23D1F80A09C008F04FD /* TransitFeeds */,
 				EB09C2551F80A09C008F04FD /* TransitFeedsTests */,
+				EB09C2751F80A0FE008F04FD /* TFFoundation */,
+				EB09C2821F80A132008F04FD /* TFFoundationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +403,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EB09C2541F80A09C008F04FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB09C2811F80A132008F04FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,6 +437,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB09C2721F80A0FE008F04FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB09C2961F813990008F04FD /* FeedAPIClient.m in Sources */,
+				EB09C29F1F81444B008F04FD /* TFLogger.m in Sources */,
+				EB09C2991F813DDF008F04FD /* Feed.m in Sources */,
+				EB09C27A1F80A0FE008F04FD /* TFFoundation.m in Sources */,
+				EB09C2901F80AA07008F04FD /* TFAPIClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB09C27F1F80A132008F04FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB09C2861F80A132008F04FD /* TFFoundationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -226,6 +464,11 @@
 			isa = PBXTargetDependency;
 			target = EB09C23D1F80A09C008F04FD /* TransitFeeds */;
 			targetProxy = EB09C2571F80A09C008F04FD /* PBXContainerItemProxy */;
+		};
+		EB09C28A1F80A132008F04FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB09C2751F80A0FE008F04FD /* TFFoundation */;
+			targetProxy = EB09C2891F80A132008F04FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -297,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -346,7 +589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -359,8 +602,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG46ENA27M;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$SOURCE_ROOT/**";
 				INFOPLIST_FILE = TransitFeeds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brozh.TransitFeeds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,8 +618,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EG46ENA27M;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$SOURCE_ROOT/**";
 				INFOPLIST_FILE = TransitFeeds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brozh.TransitFeeds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,6 +658,60 @@
 			};
 			name = Release;
 		};
+		EB09C27D1F80A0FE008F04FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EG46ENA27M;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TFFoundation/TFFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB09C27E1F80A0FE008F04FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EG46ENA27M;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TFFoundation/TFFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB09C28C1F80A132008F04FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EG46ENA27M;
+				INFOPLIST_FILE = TFFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brozh.TFFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB09C28D1F80A132008F04FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EG46ENA27M;
+				INFOPLIST_FILE = TFFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.brozh.TFFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -437,6 +738,24 @@
 			buildConfigurations = (
 				EB09C2631F80A09C008F04FD /* Debug */,
 				EB09C2641F80A09C008F04FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB09C27C1F80A0FE008F04FD /* Build configuration list for PBXNativeTarget "TFFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB09C27D1F80A0FE008F04FD /* Debug */,
+				EB09C27E1F80A0FE008F04FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB09C28B1F80A132008F04FD /* Build configuration list for PBXNativeTarget "TFFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB09C28C1F80A132008F04FD /* Debug */,
+				EB09C28D1F80A132008F04FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
