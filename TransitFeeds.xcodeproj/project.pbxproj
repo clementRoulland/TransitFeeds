@@ -26,11 +26,13 @@
 		EB09C2A41F814C89008F04FD /* TFLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C29D1F81444B008F04FD /* TFLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB09C2A51F814C89008F04FD /* TFLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2A01F81450F008F04FD /* TFLog.h */; };
 		EB09C2A61F814C89008F04FD /* TFAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C28E1F80AA07008F04FD /* TFAPIClient.h */; };
-		EB09C2A71F814C89008F04FD /* FeedAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2941F813990008F04FD /* FeedAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB09C2A71F814C89008F04FD /* FeedAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2941F813990008F04FD /* FeedAPIClient.h */; };
 		EB09C2A81F814C89008F04FD /* Feed.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2971F813DDF008F04FD /* Feed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB09C2AC1F81533C008F04FD /* libTFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB09C2761F80A0FE008F04FD /* libTFFoundation.a */; };
 		EBC8AE4C1F8165D30056B59D /* FeedMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EBC8AE4A1F8165D30056B59D /* FeedMapper.h */; };
 		EBC8AE4D1F8165D30056B59D /* FeedMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE4B1F8165D30056B59D /* FeedMapper.m */; };
+		EBC8AE501F816C0B0056B59D /* FeedStore.h in Headers */ = {isa = PBXBuildFile; fileRef = EBC8AE4E1F816C0B0056B59D /* FeedStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBC8AE511F816C0B0056B59D /* FeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE4F1F816C0B0056B59D /* FeedStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		EB09C2A91F814FFF008F04FD /* TFFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		EBC8AE4A1F8165D30056B59D /* FeedMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedMapper.h; sourceTree = "<group>"; };
 		EBC8AE4B1F8165D30056B59D /* FeedMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedMapper.m; sourceTree = "<group>"; };
+		EBC8AE4E1F816C0B0056B59D /* FeedStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedStore.h; sourceTree = "<group>"; };
+		EBC8AE4F1F816C0B0056B59D /* FeedStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,8 @@
 		EB09C2931F813969008F04FD /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				EBC8AE4E1F816C0B0056B59D /* FeedStore.h */,
+				EBC8AE4F1F816C0B0056B59D /* FeedStore.m */,
 				EB09C2941F813990008F04FD /* FeedAPIClient.h */,
 				EB09C2951F813990008F04FD /* FeedAPIClient.m */,
 				EBC8AE4A1F8165D30056B59D /* FeedMapper.h */,
@@ -267,6 +273,7 @@
 			files = (
 				EB09C2A41F814C89008F04FD /* TFLogger.h in Headers */,
 				EBC8AE4C1F8165D30056B59D /* FeedMapper.h in Headers */,
+				EBC8AE501F816C0B0056B59D /* FeedStore.h in Headers */,
 				EB09C2A71F814C89008F04FD /* FeedAPIClient.h in Headers */,
 				EB09C2A31F814C89008F04FD /* Constants.h in Headers */,
 				EB09C2A51F814C89008F04FD /* TFLog.h in Headers */,
@@ -453,6 +460,7 @@
 				EB09C2991F813DDF008F04FD /* Feed.m in Sources */,
 				EB09C27A1F80A0FE008F04FD /* TFFoundation.m in Sources */,
 				EBC8AE4D1F8165D30056B59D /* FeedMapper.m in Sources */,
+				EBC8AE511F816C0B0056B59D /* FeedStore.m in Sources */,
 				EB09C2901F80AA07008F04FD /* TFAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

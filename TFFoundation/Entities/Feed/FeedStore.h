@@ -1,5 +1,5 @@
 //
-//  FeedAPIClient.h
+//  FeedStore.h
 //  TFFoundation
 //
 //  Created by Clement Roulland on 17-10-01.
@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TFAPIClient.h"
 
-@protocol FeedAPIClientProtocol
+@protocol FeedStoreProtocol
 
 /**
  Get feeds
@@ -18,9 +17,17 @@
  */
 - (void)getFeedsWithCompletion:(void (^)(NSArray *feeds, NSError *error))completion;
 
+
+/**
+ Get feeds by country
+
+ @param completion Block with feeds by country and error
+ */
+- (void)getFeedsByCountryWithCompletion:(void (^)(NSDictionary *feedsByCountry, NSError *error))completion;
+
 @end
 
-@interface FeedAPIClient : TFAPIClient <FeedAPIClientProtocol>
+@interface FeedStore : NSObject <FeedStoreProtocol>
 
 ///--------------------------------------
 #pragma mark - Singleton
@@ -29,9 +36,10 @@
 + (instancetype)sharedInstance;
 
 ///--------------------------------------
-#pragma mark - Metohds
+#pragma mark - Methods
 ///--------------------------------------
 
 - (void)getFeedsWithCompletion:(void (^)(NSArray *feeds, NSError *error))completion;
+- (void)getFeedsByCountryWithCompletion:(void (^)(NSDictionary *feedsByCountry, NSError *error))completion;
 
 @end

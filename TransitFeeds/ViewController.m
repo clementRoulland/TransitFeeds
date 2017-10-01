@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[FeedAPIClient sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
+    [[FeedStore sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
         for (Feed *feed in feeds) {
             NSLog(@"%@", feed.name);
         }

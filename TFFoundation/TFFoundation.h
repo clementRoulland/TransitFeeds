@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "FeedAPIClient.h"
+// Feed
+#import "FeedStore.h"
 #import "Feed.h"
+
 // Logger
 #import "TFLogger.h"
 
