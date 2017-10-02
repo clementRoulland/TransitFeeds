@@ -7,6 +7,7 @@
 //
 
 #import "FeedMapper.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation FeedMapper
 
@@ -19,14 +20,29 @@
     NSString *name          = apiFeed[@"name"];
     NSString *city          = apiFeed[@"location"];
     NSString *countryCode   = apiFeed[@"country_code"];
+    NSDictionary *bounds    = apiFeed[@"bounds"];
     
-    if (!(name && city && countryCode)) {
+    if (!(name && city && countryCode && bounds)) {
         return nil;
     }
     
-    return [[Feed alloc] initWithName: name
-                                 city: city
-                          countryCode: countryCode];
+    double minLat   = ((NSNumber*)bounds[@"min_lat"]).doubleValue;
+    double maxLat   = ((NSNumber*)bounds[@"max_lat"]).doubleValue;
+    double minLong  = ((NSNumber*)bounds[@"min_lon"]).doubleValue;
+    double maxLong  = ((NSNumber*)bounds[@"max_lon"]).doubleValue;
+    
+    if (!(minLat && maxLat && minLong && maxLong)) {
+        return nil;
+    }
+    
+    double latitude     = minLat + maxLat - minLat;
+    double longitude    = minLong + maxLong - minLong;
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+    
+    return [[Feed alloc] initWithName:name
+                                 city:city
+                          countryCode:countryCode
+                           coordinate:coordinate];
 }
 
 @end

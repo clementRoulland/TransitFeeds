@@ -47,7 +47,6 @@
     presenter.viewController    = self;
     
     self.interactor = interactor;
-    
 }
 
 - (void)viewDidLoad {

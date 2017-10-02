@@ -12,7 +12,9 @@
 
 - (void)presentFeeds:(NSArray *)feeds
 {
-    [self.viewController displayPins];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.viewController displayPins];
+    });
 }
 
 @end

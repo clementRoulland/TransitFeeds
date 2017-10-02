@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface Feed : NSObject
 
@@ -20,6 +21,8 @@
 @property (readonly) NSString *city;
 /// Feed country code
 @property (readonly) NSString *countryCode;
+/// Feed coordinate
+@property (readonly) CLLocationCoordinate2D coordinate;
 
 
 ///--------------------------------------
@@ -32,10 +35,12 @@
  @param name        feed name
  @param city        feed city
  @param countryCode feed countryCode
+ @param coordinate  feed coordinate
  @return            created feesd
  */
 - (instancetype)initWithName:(NSString *)name
                         city:(NSString *)city
-                 countryCode:(NSString *)countryCode;
+                 countryCode:(NSString *)countryCode
+                  coordinate:(CLLocationCoordinate2D)coordinate;
 
 @end

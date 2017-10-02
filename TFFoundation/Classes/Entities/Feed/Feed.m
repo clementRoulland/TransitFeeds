@@ -17,12 +17,14 @@
 - (instancetype)initWithName:(NSString *)name
                         city:(NSString *)city
                  countryCode:(NSString *)countryCode
+                  coordinate:(CLLocationCoordinate2D)coordinate
 {
     self = [super init];
     if (self) {
-        _name       = name;
+        _name           = name;
         _city           = city;
         _countryCode    = countryCode;
+        _coordinate     = coordinate;
     }
     return self;
 }
