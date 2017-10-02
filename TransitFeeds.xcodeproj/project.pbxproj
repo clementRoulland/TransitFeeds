@@ -27,6 +27,7 @@
 		EB09C2A71F814C89008F04FD /* FeedAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2941F813990008F04FD /* FeedAPIClient.h */; };
 		EB09C2A81F814C89008F04FD /* Feed.h in Headers */ = {isa = PBXBuildFile; fileRef = EB09C2971F813DDF008F04FD /* Feed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB09C2AC1F81533C008F04FD /* libTFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB09C2761F80A0FE008F04FD /* libTFFoundation.a */; };
+		EBA12D901F81F1B800BB38D3 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA12D8F1F81F1B800BB38D3 /* UIImage+Color.m */; };
 		EBC8AE4C1F8165D30056B59D /* FeedMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EBC8AE4A1F8165D30056B59D /* FeedMapper.h */; };
 		EBC8AE4D1F8165D30056B59D /* FeedMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE4B1F8165D30056B59D /* FeedMapper.m */; };
 		EBC8AE501F816C0B0056B59D /* FeedStore.h in Headers */ = {isa = PBXBuildFile; fileRef = EBC8AE4E1F816C0B0056B59D /* FeedStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,6 +97,8 @@
 		EB09C29E1F81444B008F04FD /* TFLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFLogger.m; sourceTree = "<group>"; };
 		EB09C2A01F81450F008F04FD /* TFLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFLog.h; sourceTree = "<group>"; };
 		EB09C2A91F814FFF008F04FD /* TFFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFFoundation-Prefix.pch"; sourceTree = "<group>"; };
+		EBA12D8E1F81F1B800BB38D3 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		EBA12D8F1F81F1B800BB38D3 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		EBC8AE4A1F8165D30056B59D /* FeedMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedMapper.h; sourceTree = "<group>"; };
 		EBC8AE4B1F8165D30056B59D /* FeedMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedMapper.m; sourceTree = "<group>"; };
 		EBC8AE4E1F816C0B0056B59D /* FeedStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedStore.h; sourceTree = "<group>"; };
@@ -263,6 +266,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EBA12D8D1F81F19600BB38D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBA12D8E1F81F1B800BB38D3 /* UIImage+Color.h */,
+				EBA12D8F1F81F1B800BB38D3 /* UIImage+Color.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EBC8AE521F81B2130056B59D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +305,7 @@
 				EB09C2411F80A09C008F04FD /* AppDelegate.h */,
 				EB09C2421F80A09C008F04FD /* AppDelegate.m */,
 				EBC8AE521F81B2130056B59D /* Scenes */,
+				EBA12D8D1F81F19600BB38D3 /* Extensions */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -510,6 +523,7 @@
 			files = (
 				EBC8AE661F81C33B0056B59D /* ShowFeedsPresenter.m in Sources */,
 				EB09C2511F80A09C008F04FD /* main.m in Sources */,
+				EBA12D901F81F1B800BB38D3 /* UIImage+Color.m in Sources */,
 				EBC8AE6C1F81D7E50056B59D /* ShowFeedsModels.m in Sources */,
 				EB09C2431F80A09C008F04FD /* AppDelegate.m in Sources */,
 				EBC8AE561F81B2560056B59D /* ShowFeedsViewController.m in Sources */,
