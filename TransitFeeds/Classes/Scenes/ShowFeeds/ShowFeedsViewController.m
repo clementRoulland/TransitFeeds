@@ -76,14 +76,14 @@ static NSString * const kAnnotationIdentifier = @"ShowFeedsAnnotationIdentifier"
             viewForAnnotation:(id<MKAnnotation>)annotation
 {
     // comment this to use provided image, from here
-//    if (@available(iOS 11.0, *)) {
-//        MKMarkerAnnotationView *marker = (MKMarkerAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:kAnnotationIdentifier];
-//        if (!marker) {
-//            marker = [[MKMarkerAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kAnnotationIdentifier];
-//        }
-//        marker.markerTintColor = ((ShowFeedsAnnotation *)annotation).pinColor;
-//        return marker;
-//    }
+    if (@available(iOS 11.0, *)) {
+        MKMarkerAnnotationView *marker = (MKMarkerAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:kAnnotationIdentifier];
+        if (!marker) {
+            marker = [[MKMarkerAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kAnnotationIdentifier];
+        }
+        marker.markerTintColor = ((ShowFeedsAnnotation *)annotation).pinColor;
+        return marker;
+    }
     // to here
     
     MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:kAnnotationIdentifier];
