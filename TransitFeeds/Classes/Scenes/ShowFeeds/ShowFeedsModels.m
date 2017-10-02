@@ -13,12 +13,14 @@
 - (instancetype)initWithTitle:(NSString *)title
                      subtitle:(NSString *)subtitle
                    coordinate:(CLLocationCoordinate2D)coordinate
+                     pinColor:(UIColor *)pinColor
 {
     self = [super init];
     if (self) {
-        _title = title;
-        _subtitle = subtitle;
+        _title      = title;
+        _subtitle   = subtitle;
         _coordinate = coordinate;
+        _pinColor   = pinColor;
     }
     return self;
 }

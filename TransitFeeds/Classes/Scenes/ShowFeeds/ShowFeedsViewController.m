@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "ShowFeedsViewController.h"
 #import "ShowFeedsInteractor.h"
+#import "ShowFeedsModels.h"
 
 @interface ShowFeedsViewController ()
 
@@ -20,6 +21,8 @@
 @end
 
 @implementation ShowFeedsViewController
+
+static NSString * const kAnnotationIdentifier = @"ShowFeedsAnnotationIdentifier";
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,5 +70,28 @@
 @end
 
 @implementation ShowFeedsViewController (MKMapViewDelegate)
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if (@available(iOS 11.0, *)) {
+        MKMarkerAnnotationView *marker = (MKMarkerAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:kAnnotationIdentifier];
+        if (!marker) {
+            marker = [[MKMarkerAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kAnnotationIdentifier];
+        }
+        marker.markerTintColor = ((ShowFeedsAnnotation *)annotation).pinColor;
+        return marker;
+    }
+    
+    MKPinAnnotationView *pin = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:kAnnotationIdentifier];
+    if (!pin) {
+        pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kAnnotationIdentifier];
+    }
+    if (@available(iOS 9.0, *)) {
+        pin.pinTintColor = ((ShowFeedsAnnotation *)annotation).pinColor;
+    }
+    return pin;
+    
+}
 
 @end
