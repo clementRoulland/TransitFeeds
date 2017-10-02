@@ -7,10 +7,13 @@
 //
 
 #import <TFFoundation/TFFoundation.h>
+#import <MapKit/MapKit.h>
 #import "ShowFeedsViewController.h"
 #import "ShowFeedsInteractor.h"
 
 @interface ShowFeedsViewController ()
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property NSObject<ShowFeedsInteractorProtocol> *interactor;
 
@@ -55,9 +58,14 @@
     [self.interactor getFeeds];
 }
 
-- (void)displayPins
+- (void)displayAnnotations:(nonnull NSArray<id<MKAnnotation>> *)annotations
 {
-    NSLog(@"%s", __FUNCTION__);
+    [self.mapView showAnnotations: annotations animated:true];
+    NSLog(@"%s %lu", __FUNCTION__, (unsigned long)annotations.count);
 }
+
+@end
+
+@implementation ShowFeedsViewController (MKMapViewDelegate)
 
 @end

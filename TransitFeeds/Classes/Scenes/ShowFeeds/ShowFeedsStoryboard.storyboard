@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,6 +23,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-Pi-blP">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="glH-bp-8hK" id="3b1-bJ-Rvk"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,6 +36,9 @@
                             <constraint firstItem="b88-kE-Zbx" firstAttribute="top" secondItem="vBM-Pi-blP" secondAttribute="bottom" id="Or1-hF-eHv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="vBM-Pi-blP" id="Lbk-3Q-Vou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0q0-gL-7gQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

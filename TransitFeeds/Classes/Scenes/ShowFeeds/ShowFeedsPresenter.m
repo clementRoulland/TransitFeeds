@@ -7,13 +7,23 @@
 //
 
 #import "ShowFeedsPresenter.h"
+#import <TFFoundation/TFFoundation.h>
+#import "ShowFeedsModels.h"
 
 @implementation ShowFeedsPresenter
 
 - (void)presentFeeds:(NSArray *)feeds
 {
+    NSMutableArray *annotations = [@[] mutableCopy];
+    for (Feed *feed in feeds) {
+        ShowFeedsAnnotation *annotation = [[ShowFeedsAnnotation alloc] initWithTitle:feed.name
+                                                                            subtitle:feed.city
+                                                                          coordinate:feed.coordinate];
+        [annotations addObject:annotation];
+    }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.viewController displayPins];
+        [self.viewController displayAnnotations:annotations];
     });
 }
 

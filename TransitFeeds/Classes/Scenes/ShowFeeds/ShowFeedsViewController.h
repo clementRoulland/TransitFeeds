@@ -10,7 +10,7 @@
 
 @protocol ShowFeedsViewControllerProtocol
 
-- (void)displayPins;
+- (void)displayAnnotations:(NSArray*)annotations;
 
 @end
 
