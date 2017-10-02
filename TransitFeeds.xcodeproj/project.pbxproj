@@ -34,6 +34,7 @@
 		EBC8AE561F81B2560056B59D /* ShowFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE551F81B2560056B59D /* ShowFeedsViewController.m */; };
 		EBC8AE581F81B2680056B59D /* ShowFeedsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */; };
 		EBC8AE601F81B9660056B59D /* ShowFeedsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE5F1F81B9660056B59D /* ShowFeedsInteractor.m */; };
+		EBC8AE661F81C33B0056B59D /* ShowFeedsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE651F81C33B0056B59D /* ShowFeedsPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowFeedsStoryboard.storyboard; sourceTree = "<group>"; };
 		EBC8AE5E1F81B9660056B59D /* ShowFeedsInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowFeedsInteractor.h; sourceTree = "<group>"; };
 		EBC8AE5F1F81B9660056B59D /* ShowFeedsInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFeedsInteractor.m; sourceTree = "<group>"; };
+		EBC8AE641F81C33B0056B59D /* ShowFeedsPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowFeedsPresenter.h; sourceTree = "<group>"; };
+		EBC8AE651F81C33B0056B59D /* ShowFeedsPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFeedsPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +276,8 @@
 				EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */,
 				EBC8AE5E1F81B9660056B59D /* ShowFeedsInteractor.h */,
 				EBC8AE5F1F81B9660056B59D /* ShowFeedsInteractor.m */,
+				EBC8AE641F81C33B0056B59D /* ShowFeedsPresenter.h */,
+				EBC8AE651F81C33B0056B59D /* ShowFeedsPresenter.m */,
 			);
 			path = ShowFeeds;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC8AE661F81C33B0056B59D /* ShowFeedsPresenter.m in Sources */,
 				EB09C2511F80A09C008F04FD /* main.m in Sources */,
 				EB09C2431F80A09C008F04FD /* AppDelegate.m in Sources */,
 				EBC8AE561F81B2560056B59D /* ShowFeedsViewController.m in Sources */,

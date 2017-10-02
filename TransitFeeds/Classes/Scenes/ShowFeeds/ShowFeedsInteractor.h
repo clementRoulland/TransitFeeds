@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <TFFoundation/TFFoundation.h>
+#import "ShowFeedsPresenter.h"
 
 @protocol ShowFeedsInteractorProtocol
 
@@ -15,21 +16,8 @@
 
 @end
 
-@interface ShowFeedsInteractor : NSObject
+@interface ShowFeedsInteractor : NSObject <ShowFeedsInteractorProtocol>
 
-@end
-
-@implementation ShowFeedsInteractor (ShowFeedsInteractorProtocol)
-
-- (void)getFeeds
-{
-    [[FeedStore sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            for (Feed *feed in feeds) {
-                NSLog(@"%@", feed.name);
-            }
-        });
-    }];
-}
+@property NSObject<ShowFeedsPresenterProtocol> *presenter;
 
 @end

@@ -10,4 +10,14 @@
 
 @implementation ShowFeedsInteractor
 
+- (void)getFeeds
+{
+    [[FeedStore sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
+        if (error) {
+            return;
+        }
+        [self.presenter presentFeeds:feeds];
+    }];
+}
+
 @end

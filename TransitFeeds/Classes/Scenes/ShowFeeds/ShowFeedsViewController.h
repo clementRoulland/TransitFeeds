@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowFeedsViewController : UIViewController
+@protocol ShowFeedsViewControllerProtocol
+
+- (void)displayPins;
+
+@end
+
+@interface ShowFeedsViewController : UIViewController <ShowFeedsViewControllerProtocol>
 
 @end

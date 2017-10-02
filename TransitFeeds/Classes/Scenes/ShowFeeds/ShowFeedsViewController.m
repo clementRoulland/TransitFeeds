@@ -41,19 +41,24 @@
 - (void)setupScene
 {
     ShowFeedsInteractor *interactor = [[ShowFeedsInteractor alloc] init];
+    ShowFeedsPresenter  *presenter  = [[ShowFeedsPresenter alloc] init];
+    
+    interactor.presenter        = presenter;
+    presenter.viewController    = self;
+    
     self.interactor = interactor;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     [self.interactor getFeeds];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)displayPins
+{
+    NSLog(@"%s", __FUNCTION__);
 }
 
 @end
