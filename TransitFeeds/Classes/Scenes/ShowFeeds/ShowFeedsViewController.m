@@ -8,24 +8,47 @@
 
 #import <TFFoundation/TFFoundation.h>
 #import "ShowFeedsViewController.h"
+#import "ShowFeedsInteractor.h"
 
 @interface ShowFeedsViewController ()
+
+@property NSObject<ShowFeedsInteractorProtocol> *interactor;
 
 @end
 
 @implementation ShowFeedsViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName: nibNameOrNil
+                           bundle: nibBundleOrNil];
+    if (self) {
+        [self setupScene];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder*)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setupScene];
+    }
+    
+    return self;
+}
+
+- (void)setupScene
+{
+    ShowFeedsInteractor *interactor = [[ShowFeedsInteractor alloc] init];
+    self.interactor = interactor;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [[FeedStore sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            for (Feed *feed in feeds) {
-                NSLog(@"%@", feed.name);
-            }
-        });
-    }];
+    [self.interactor getFeeds];
 }
 
 - (void)didReceiveMemoryWarning {

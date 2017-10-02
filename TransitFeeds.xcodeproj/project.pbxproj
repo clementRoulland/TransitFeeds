@@ -33,6 +33,7 @@
 		EBC8AE511F816C0B0056B59D /* FeedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE4F1F816C0B0056B59D /* FeedStore.m */; };
 		EBC8AE561F81B2560056B59D /* ShowFeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE551F81B2560056B59D /* ShowFeedsViewController.m */; };
 		EBC8AE581F81B2680056B59D /* ShowFeedsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */; };
+		EBC8AE601F81B9660056B59D /* ShowFeedsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC8AE5F1F81B9660056B59D /* ShowFeedsInteractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		EBC8AE541F81B2560056B59D /* ShowFeedsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowFeedsViewController.h; sourceTree = "<group>"; };
 		EBC8AE551F81B2560056B59D /* ShowFeedsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFeedsViewController.m; sourceTree = "<group>"; };
 		EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowFeedsStoryboard.storyboard; sourceTree = "<group>"; };
+		EBC8AE5E1F81B9660056B59D /* ShowFeedsInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowFeedsInteractor.h; sourceTree = "<group>"; };
+		EBC8AE5F1F81B9660056B59D /* ShowFeedsInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFeedsInteractor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +271,8 @@
 				EBC8AE541F81B2560056B59D /* ShowFeedsViewController.h */,
 				EBC8AE551F81B2560056B59D /* ShowFeedsViewController.m */,
 				EBC8AE571F81B2680056B59D /* ShowFeedsStoryboard.storyboard */,
+				EBC8AE5E1F81B9660056B59D /* ShowFeedsInteractor.h */,
+				EBC8AE5F1F81B9660056B59D /* ShowFeedsInteractor.m */,
 			);
 			path = ShowFeeds;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 				EB09C2511F80A09C008F04FD /* main.m in Sources */,
 				EB09C2431F80A09C008F04FD /* AppDelegate.m in Sources */,
 				EBC8AE561F81B2560056B59D /* ShowFeedsViewController.m in Sources */,
+				EBC8AE601F81B9660056B59D /* ShowFeedsInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

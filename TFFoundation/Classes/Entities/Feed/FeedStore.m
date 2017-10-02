@@ -34,9 +34,4 @@
     [[FeedAPIClient sharedInstance] getFeedsWithCompletion:completion];
 }
 
-- (void)getFeedsByCountryWithCompletion:(void (^)(NSDictionary *feedsByCountry, NSError *error))completion
-{
-    
-}
-
 @end
