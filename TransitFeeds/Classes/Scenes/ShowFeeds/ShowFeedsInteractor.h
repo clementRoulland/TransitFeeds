@@ -10,11 +10,19 @@
 #import <TFFoundation/TFFoundation.h>
 #import "ShowFeedsPresenter.h"
 
+///--------------------------------------
+#pragma mark - ShowFeedsInteractorProtocol
+///--------------------------------------
+
 @protocol ShowFeedsInteractorProtocol
 
 - (void)getFeeds;
 
 @end
+
+///--------------------------------------
+#pragma mark - ShowFeedsInteractor
+///--------------------------------------
 
 @interface ShowFeedsInteractor : NSObject <ShowFeedsInteractorProtocol>
 

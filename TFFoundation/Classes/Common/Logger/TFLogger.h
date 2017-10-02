@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+///--------------------------------------
+#pragma mark - TFLogLevel
+///--------------------------------------
+
 typedef NS_ENUM(NSInteger, TFLogLevel) {
     /**
      No logs
@@ -31,17 +35,21 @@ typedef NS_ENUM(NSInteger, TFLogLevel) {
     TFLogLevelDebug = 4
 };
 
+///--------------------------------------
+#pragma mark - TFLogger
+///--------------------------------------
+
 @interface TFLogger : NSObject
 
 ///--------------------------------------
-#pragma mark - Properties
+#pragma mark Properties
 ///--------------------------------------
 
 /// Logs level
 @property (atomic, assign) TFLogLevel logLevel;
 
 ///--------------------------------------
-#pragma mark - Singleton
+#pragma mark Singleton
 ///--------------------------------------
 
 /**
@@ -52,7 +60,7 @@ typedef NS_ENUM(NSInteger, TFLogLevel) {
 + (instancetype)sharedLogger;
 
 ///--------------------------------------
-#pragma mark - Methods
+#pragma mark Methods
 ///--------------------------------------
 
 /**

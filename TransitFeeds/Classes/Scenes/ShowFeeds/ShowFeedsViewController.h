@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+///--------------------------------------
+#pragma mark - ShowFeedsViewControllerProtocol
+///--------------------------------------
+
 @protocol ShowFeedsViewControllerProtocol
 
 - (void)displayAnnotations:(NSArray*)annotations;
 
 @end
+
+///--------------------------------------
+#pragma mark - ShowFeedsViewController
+///--------------------------------------
 
 @interface ShowFeedsViewController : UIViewController <ShowFeedsViewControllerProtocol>
 

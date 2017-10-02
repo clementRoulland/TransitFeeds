@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Feed.h"
 
 ///--------------------------------------
 #pragma mark - FeedStoreProtocol
@@ -19,7 +20,7 @@
  
  @param completion Block with feeds and error
  */
-- (void)getFeedsWithCompletion:(void (^)(NSArray *feeds, NSError *error))completion;
+- (void)getFeedsWithCompletion:(void (^)(NSArray<Feed *> *feeds, NSError *error))completion;
 
 @end
 
@@ -29,6 +30,6 @@
 
 @interface FeedStore : NSObject <FeedStoreProtocol>
 
-+ (instancetype)sharedInstance;
++ (NSObject<FeedStoreProtocol> *)sharedInstance;
 
 @end

@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "TFAPIClient.h"
+#import "Feed.h"
+
+///--------------------------------------
+#pragma mark - FeedAPIClientProtocol
+///--------------------------------------
 
 @protocol FeedAPIClientProtocol
 
@@ -16,22 +21,16 @@
  
  @param completion Block with feeds and error
  */
-- (void)getFeedsWithCompletion:(void (^)(NSArray *feeds, NSError *error))completion;
+- (void)getFeedsWithCompletion:(void (^)(NSArray<Feed *> *feeds, NSError *error))completion;
 
 @end
 
+///--------------------------------------
+#pragma mark - FeedAPIClient
+///--------------------------------------
+
 @interface FeedAPIClient : TFAPIClient <FeedAPIClientProtocol>
 
-///--------------------------------------
-#pragma mark - Singleton
-///--------------------------------------
-
-+ (instancetype)sharedInstance;
-
-///--------------------------------------
-#pragma mark - Metohds
-///--------------------------------------
-
-- (void)getFeedsWithCompletion:(void (^)(NSArray *feeds, NSError *error))completion;
++ (NSObject<FeedAPIClientProtocol> *)sharedInstance;
 
 @end

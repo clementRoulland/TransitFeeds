@@ -8,7 +8,18 @@
 
 #import "ShowFeedsModels.h"
 
+///--------------------------------------
+#pragma mark - ShowFeedsAnnotation
+///--------------------------------------
+
 @implementation ShowFeedsAnnotation
+
+@synthesize title       = _title;
+@synthesize subtitle    = _subtitle;
+@synthesize coordinate  = _coordinate;
+@synthesize pinColor    = _pinColor;
+
+#pragma mark Initializers
 
 - (instancetype)initWithTitle:(NSString *)title
                      subtitle:(NSString *)subtitle

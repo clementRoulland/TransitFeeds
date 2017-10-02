@@ -13,17 +13,33 @@
 #import "ShowFeedsModels.h"
 #import "UIImage+Color.h"
 
+///--------------------------------------
+#pragma mark - ShowFeedsViewController
+///--------------------------------------
+
 @interface ShowFeedsViewController ()
 
+#pragma mark IBOutlets
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+#pragma mark Properties
 
 @property NSObject<ShowFeedsInteractorProtocol> *interactor;
 
 @end
 
+///--------------------------------------
+#pragma mark - ShowFeedsViewController
+///--------------------------------------
+
 @implementation ShowFeedsViewController
 
+#pragma mark Constants
+
 static NSString * const kAnnotationIdentifier = @"ShowFeedsAnnotationIdentifier";
+
+#pragma mark Initializers
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,11 +72,15 @@ static NSString * const kAnnotationIdentifier = @"ShowFeedsAnnotationIdentifier"
     self.interactor = interactor;
 }
 
+#pragma mark Life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.interactor getFeeds];
 }
+
+#pragma mark ShowFeedsViewControllerProtocol implementation
 
 - (void)displayAnnotations:(nonnull NSArray<id<MKAnnotation>> *)annotations
 {
@@ -69,6 +89,10 @@ static NSString * const kAnnotationIdentifier = @"ShowFeedsAnnotationIdentifier"
 }
 
 @end
+
+///--------------------------------------
+#pragma mark - MKMapViewDelegate implementation
+///--------------------------------------
 
 @implementation ShowFeedsViewController (MKMapViewDelegate)
 
@@ -82,6 +106,8 @@ static NSString * const kAnnotationIdentifier = @"ShowFeedsAnnotationIdentifier"
             marker = [[MKMarkerAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:kAnnotationIdentifier];
         }
         marker.markerTintColor = ((ShowFeedsAnnotation *)annotation).pinColor;
+        marker.enabled          = YES;
+        marker.canShowCallout   = YES;
         return marker;
     }
     // to here

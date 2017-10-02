@@ -10,6 +10,10 @@
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
 
+///--------------------------------------
+#pragma mark - ShowFeedsAnnotation
+///--------------------------------------
+
 @interface ShowFeedsAnnotation : NSObject <MKAnnotation>{
     CLLocationCoordinate2D coordinate;
     NSString    *title;
@@ -17,10 +21,14 @@
     UIColor     *pinColor;
 }
 
+#pragma mark Properties
+
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) NSString *subtitle;
+@property (nonatomic, readonly, copy) NSString *title;
+@property (nonatomic, readonly, copy) NSString *subtitle;
 @property (nonatomic, readonly) UIColor  *pinColor;
+
+#pragma mark Initializers
 
 - (instancetype)initWithTitle:(NSString *)title
                      subtitle:(NSString *)subtitle

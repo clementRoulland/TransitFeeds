@@ -10,6 +10,12 @@
 
 @interface UIImage (vImageScaling)
 
+/**
+ Return colorized image
+
+ @param color desired color
+ @return colored image
+ */
 - (UIImage *)colorized:(UIColor *)color;
 
 @end

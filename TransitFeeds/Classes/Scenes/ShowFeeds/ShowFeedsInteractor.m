@@ -10,9 +10,11 @@
 
 @implementation ShowFeedsInteractor
 
+#pragma mark - ShowFeedsInteractorProtocol implementation
+
 - (void)getFeeds
 {
-    [[FeedStore sharedInstance] getFeedsWithCompletion:^(NSArray *feeds, NSError *error) {
+    [[FeedStore sharedInstance] getFeedsWithCompletion:^(NSArray<Feed *> *feeds, NSError *error) {
         if (error) {
             return;
         }

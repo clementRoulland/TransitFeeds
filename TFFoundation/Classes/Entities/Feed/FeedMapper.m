@@ -35,15 +35,14 @@
         return nil;
     }
     
-    CLLocationCoordinate2D minCoordinate = CLLocationCoordinate2DMake(minLat, minLong);
-    CLLocationCoordinate2D maxCoordinate = CLLocationCoordinate2DMake(maxLat, maxLong);
-    
-    CLLocationCoordinate2D coordinate = [FeedMapper findCenterPoint:minCoordinate :maxCoordinate];
+    CLLocationCoordinate2D minCoordinate    = CLLocationCoordinate2DMake(minLat, minLong);
+    CLLocationCoordinate2D maxCoordinate    = CLLocationCoordinate2DMake(maxLat, maxLong);
+    CLLocationCoordinate2D centerCoordinate = [FeedMapper findCenterPoint:minCoordinate :maxCoordinate];
     
     return [[Feed alloc] initWithName:name
                                  city:city
                           countryCode:countryCode
-                           coordinate:coordinate];
+                           coordinate:centerCoordinate];
 }
 
 + (CLLocationCoordinate2D)findCenterPoint:(CLLocationCoordinate2D)_lo1 :(CLLocationCoordinate2D)_loc2 {

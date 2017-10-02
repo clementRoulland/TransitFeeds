@@ -9,11 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "ShowFeedsViewController.h"
 
+///--------------------------------------
+#pragma mark - ShowFeedsPresenterProtocol
+///--------------------------------------
+
 @protocol ShowFeedsPresenterProtocol
 
 - (void)presentFeeds:(NSArray *)feeds;
 
 @end
+
+///--------------------------------------
+#pragma mark - ShowFeedsPresenter
+///--------------------------------------
 
 @interface ShowFeedsPresenter : NSObject <ShowFeedsPresenterProtocol>
 

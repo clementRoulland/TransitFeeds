@@ -15,7 +15,7 @@
 #pragma mark - Singleton
 ///--------------------------------------
 
-+ (instancetype)sharedInstance
++ (NSObject<FeedStoreProtocol> *)sharedInstance
 {
     static FeedStore *_sharedInstance = nil;
     static dispatch_once_t oncePredicate;
@@ -29,7 +29,7 @@
 #pragma mark - Methods
 ///--------------------------------------
 
-- (void)getFeedsWithCompletion:(void (^)(NSArray *feeds, NSError *error))completion
+- (void)getFeedsWithCompletion:(void (^)(NSArray<Feed *> *feeds, NSError *error))completion
 {
     [[FeedAPIClient sharedInstance] getFeedsWithCompletion:completion];
 }
